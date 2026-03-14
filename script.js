@@ -1,0 +1,21 @@
+// Scroll Animation
+
+const cards = document.querySelectorAll(".card");
+
+window.addEventListener("scroll", function(){
+
+cards.forEach(function(card){
+
+const position = card.getBoundingClientRect().top;
+const screen = window.innerHeight;
+
+if(position < screen - 50){
+
+card.style.opacity = "1";
+card.style.transform = "translateY(0)";
+
+}
+
+});
+
+});
